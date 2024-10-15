@@ -9,7 +9,8 @@ namespace Laboratorium_1.Controllers
         {
             return View();
         }
-        public IActionResult Result(Calculator model)
+        [HttpPost]
+        public IActionResult Result([FromForm] Calculator model)
         {
             if (!model.IsValid())
             {
